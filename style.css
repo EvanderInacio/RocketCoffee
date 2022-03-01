@@ -5,10 +5,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Manrope', sans-serif;
-
-  margin-top: .75rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
 }
 
 a{
@@ -18,6 +14,7 @@ a{
 
 html{
   background: var(--backgrond);
+  display: grid;
 }
 
 :root {
@@ -29,19 +26,128 @@ html{
   --text-color-menu-mobile: #E1E1E6;
 }
 
-nav{
-  text-align: center;
+@media (max-width: 768px){
+nav .menu{
+  display: none;
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background: var(--backgrond);
+}
+
+#nav.active .menu{
+  display: block;
+}
+
+.menu-li{
+ margin: 1.5rem;
+ padding: .8rem;
+ border-bottom: 1px solid #8257E5;
+}
+
+.logo{
+  margin: 1rem;
+}
+
+.logo-desktop{
+  display: none;
+  visibility: hidden;
+}
+
+.mobile{
+  margin: 15px;
   display: flex;
   justify-content: space-between;
 }
 
-.menu{
-  display: flex;
-  flex-direction: row;
+#menu-mobile{
+  font-size: 2rem;
+  color: var(--button);
+  cursor: pointer;
 }
+
 
 .title{
   margin-top: 5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.title-mobile{
+  color: var(--text-color);
+  margin-bottom: 5.5rem;
+  text-align: center;
+}
+
+.title h1 span{
+  color: var(--backgrond);
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button), -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+.btn{
+  text-align: center;
+  justify-content: center;
+  display: flex;
+}
+
+.button{
+  border: 1px solid var(--button);
+  justify-content: center;
+  width: 15rem;
+  padding: 10px;
+  text-align: center;
+}
+
+.container{
+  text-align: center;
+}
+
+.home-img img{
+  text-align: center;
+  width: 20rem;
+}
+
+}
+
+
+/*.close{
+  color: var(--button);
+  font-size: 1.5rem;
+  display: none;
+ }*/
+
+@media (min-width: 769px){
+body{
+  margin-top: 2rem;
+}
+
+.mobile{
+  display: none;
+}
+
+nav{
+  display: flex;
+  justify-content: space-evenly;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+#nav .menu-li{
+  display: flex;
+  flex-direction: row;
+  float: left;
+  padding: 1.2rem;
+}
+
+.menu-li:hover{
+  color: #a988c4;
+  border-bottom: 2px solid var(--button);
+}
+
+.title{
+  margin-top: 8rem;
   font-size: 3rem;
   text-align: center;
   color: var(--text-color);
@@ -54,7 +160,7 @@ nav{
 
 .button{
   border: 1px solid var(--button);
-  padding: .1rem;
+  padding: 1rem;
 }
 
 .button a{
@@ -62,7 +168,12 @@ nav{
   text-align: center;
 }
 
+.button:hover{
+  background: #8257E5;
+}
+
 .home-img{
   text-align: center;
 }
-
+  
+}
