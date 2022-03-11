@@ -14,8 +14,6 @@ a {
 
 html {
   background: var(--backgrond);
-  display: grid;
-  height: 100%;
 }
 
 :root {
@@ -31,9 +29,9 @@ html {
   nav .menu {
     display: none;
     position: absolute;
+    width: 100%;
+    height: 115vh;
     z-index: 10;
-    width: 100vw;
-    height: 100vh;
     background: var(--backgrond);
   }
 
@@ -51,16 +49,18 @@ html {
     margin: 1rem;
   }
 
-  .logo-desktop {
+  nav .logo-desktop {
     display: none;
+    opacity: 0;
     visibility: hidden;
   }
 
-  .mobile {
+  .mobile-nav {
     margin: 15px;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid #1c1c1f;
+    border-bottom: 1px solid #29292e;
+    
   }
 
   #menu-mobile {
@@ -148,8 +148,9 @@ html {
   bottom: -16rem;
 }
 
-
-.mobile {
+  .mobile-nav,   
+  .button-mobile, 
+  .title-mobile {
     display: none;
   }
 
